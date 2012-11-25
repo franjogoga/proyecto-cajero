@@ -30,6 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblCentro4 = new System.Windows.Forms.Label();
+            this.lblCentro3 = new System.Windows.Forms.Label();
+            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.lblCentro2 = new System.Windows.Forms.Label();
+            this.lblCentro1 = new System.Windows.Forms.Label();
             this.lblDer4 = new System.Windows.Forms.Label();
             this.lblDer3 = new System.Windows.Forms.Label();
             this.lblDer2 = new System.Windows.Forms.Label();
@@ -59,11 +64,6 @@
             this.btnIzq3 = new System.Windows.Forms.Button();
             this.btnIzq2 = new System.Windows.Forms.Button();
             this.btnIzq1 = new System.Windows.Forms.Button();
-            this.lblCentro1 = new System.Windows.Forms.Label();
-            this.lblCentro2 = new System.Windows.Forms.Label();
-            this.lblBienvenido = new System.Windows.Forms.Label();
-            this.lblCentro3 = new System.Windows.Forms.Label();
-            this.lblCentro4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -99,77 +99,122 @@
             this.panel2.Size = new System.Drawing.Size(398, 252);
             this.panel2.TabIndex = 0;
             // 
+            // lblCentro4
+            // 
+            this.lblCentro4.AutoSize = true;
+            this.lblCentro4.Location = new System.Drawing.Point(117, 180);
+            this.lblCentro4.Name = "lblCentro4";
+            this.lblCentro4.Size = new System.Drawing.Size(10, 13);
+            this.lblCentro4.TabIndex = 5;
+            this.lblCentro4.Text = ".";
+            // 
+            // lblCentro3
+            // 
+            this.lblCentro3.AutoSize = true;
+            this.lblCentro3.Location = new System.Drawing.Point(117, 138);
+            this.lblCentro3.Name = "lblCentro3";
+            this.lblCentro3.Size = new System.Drawing.Size(10, 13);
+            this.lblCentro3.TabIndex = 4;
+            this.lblCentro3.Text = ".";
+            // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Location = new System.Drawing.Point(130, 16);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(115, 13);
+            this.lblBienvenido.TabIndex = 3;
+            this.lblBienvenido.Text = "Bienvenido a su cajero";
+            // 
+            // lblCentro2
+            // 
+            this.lblCentro2.AutoSize = true;
+            this.lblCentro2.Location = new System.Drawing.Point(117, 93);
+            this.lblCentro2.Name = "lblCentro2";
+            this.lblCentro2.Size = new System.Drawing.Size(10, 13);
+            this.lblCentro2.TabIndex = 2;
+            this.lblCentro2.Text = ".";
+            // 
+            // lblCentro1
+            // 
+            this.lblCentro1.AutoSize = true;
+            this.lblCentro1.Location = new System.Drawing.Point(117, 56);
+            this.lblCentro1.Name = "lblCentro1";
+            this.lblCentro1.Size = new System.Drawing.Size(145, 13);
+            this.lblCentro1.TabIndex = 1;
+            this.lblCentro1.Text = "Ingrese su numero de cuenta";
+            // 
             // lblDer4
             // 
             this.lblDer4.AutoSize = true;
             this.lblDer4.Location = new System.Drawing.Point(348, 212);
             this.lblDer4.Name = "lblDer4";
-            this.lblDer4.Size = new System.Drawing.Size(35, 13);
+            this.lblDer4.Size = new System.Drawing.Size(10, 13);
             this.lblDer4.TabIndex = 0;
-            this.lblDer4.Text = "label1";
+            this.lblDer4.Text = ".";
             // 
             // lblDer3
             // 
             this.lblDer3.AutoSize = true;
             this.lblDer3.Location = new System.Drawing.Point(348, 153);
             this.lblDer3.Name = "lblDer3";
-            this.lblDer3.Size = new System.Drawing.Size(35, 13);
+            this.lblDer3.Size = new System.Drawing.Size(10, 13);
             this.lblDer3.TabIndex = 0;
-            this.lblDer3.Text = "label1";
+            this.lblDer3.Text = ".";
             // 
             // lblDer2
             // 
             this.lblDer2.AutoSize = true;
             this.lblDer2.Location = new System.Drawing.Point(348, 94);
             this.lblDer2.Name = "lblDer2";
-            this.lblDer2.Size = new System.Drawing.Size(35, 13);
+            this.lblDer2.Size = new System.Drawing.Size(10, 13);
             this.lblDer2.TabIndex = 0;
-            this.lblDer2.Text = "label1";
+            this.lblDer2.Text = ".";
             // 
             // lblDer1
             // 
             this.lblDer1.AutoSize = true;
             this.lblDer1.Location = new System.Drawing.Point(348, 31);
             this.lblDer1.Name = "lblDer1";
-            this.lblDer1.Size = new System.Drawing.Size(35, 13);
+            this.lblDer1.Size = new System.Drawing.Size(10, 13);
             this.lblDer1.TabIndex = 0;
-            this.lblDer1.Text = "label1";
+            this.lblDer1.Text = ".";
             // 
             // lblIzq4
             // 
             this.lblIzq4.AutoSize = true;
             this.lblIzq4.Location = new System.Drawing.Point(9, 213);
             this.lblIzq4.Name = "lblIzq4";
-            this.lblIzq4.Size = new System.Drawing.Size(35, 13);
+            this.lblIzq4.Size = new System.Drawing.Size(10, 13);
             this.lblIzq4.TabIndex = 0;
-            this.lblIzq4.Text = "label1";
+            this.lblIzq4.Text = ".";
             // 
             // lnlIzq3
             // 
             this.lnlIzq3.AutoSize = true;
             this.lnlIzq3.Location = new System.Drawing.Point(11, 153);
             this.lnlIzq3.Name = "lnlIzq3";
-            this.lnlIzq3.Size = new System.Drawing.Size(35, 13);
+            this.lnlIzq3.Size = new System.Drawing.Size(10, 13);
             this.lnlIzq3.TabIndex = 0;
-            this.lnlIzq3.Text = "label1";
+            this.lnlIzq3.Text = ".";
             // 
             // lblIzq2
             // 
             this.lblIzq2.AutoSize = true;
             this.lblIzq2.Location = new System.Drawing.Point(11, 94);
             this.lblIzq2.Name = "lblIzq2";
-            this.lblIzq2.Size = new System.Drawing.Size(35, 13);
+            this.lblIzq2.Size = new System.Drawing.Size(10, 13);
             this.lblIzq2.TabIndex = 0;
-            this.lblIzq2.Text = "label1";
+            this.lblIzq2.Text = ".";
             // 
             // lblIzq1
             // 
             this.lblIzq1.AutoSize = true;
             this.lblIzq1.Location = new System.Drawing.Point(11, 31);
             this.lblIzq1.Name = "lblIzq1";
-            this.lblIzq1.Size = new System.Drawing.Size(35, 13);
+            this.lblIzq1.Size = new System.Drawing.Size(10, 13);
             this.lblIzq1.TabIndex = 0;
-            this.lblIzq1.Text = "label1";
+            this.lblIzq1.Text = ".";
             // 
             // groupBox1
             // 
@@ -261,6 +306,7 @@
             this.btnAceptar.Size = new System.Drawing.Size(46, 41);
             this.btnAceptar.TabIndex = 0;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btn0
             // 
@@ -400,51 +446,6 @@
             this.btnIzq1.Size = new System.Drawing.Size(56, 43);
             this.btnIzq1.TabIndex = 1;
             this.btnIzq1.UseVisualStyleBackColor = true;
-            // 
-            // lblCentro1
-            // 
-            this.lblCentro1.AutoSize = true;
-            this.lblCentro1.Location = new System.Drawing.Point(117, 56);
-            this.lblCentro1.Name = "lblCentro1";
-            this.lblCentro1.Size = new System.Drawing.Size(145, 13);
-            this.lblCentro1.TabIndex = 1;
-            this.lblCentro1.Text = "Ingrese su numero de cuenta";
-            // 
-            // lblCentro2
-            // 
-            this.lblCentro2.AutoSize = true;
-            this.lblCentro2.Location = new System.Drawing.Point(144, 94);
-            this.lblCentro2.Name = "lblCentro2";
-            this.lblCentro2.Size = new System.Drawing.Size(41, 13);
-            this.lblCentro2.TabIndex = 2;
-            this.lblCentro2.Text = "label10";
-            // 
-            // lblBienvenido
-            // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Location = new System.Drawing.Point(130, 16);
-            this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(115, 13);
-            this.lblBienvenido.TabIndex = 3;
-            this.lblBienvenido.Text = "Bienvenido a su cajero";
-            // 
-            // lblCentro3
-            // 
-            this.lblCentro3.AutoSize = true;
-            this.lblCentro3.Location = new System.Drawing.Point(129, 138);
-            this.lblCentro3.Name = "lblCentro3";
-            this.lblCentro3.Size = new System.Drawing.Size(35, 13);
-            this.lblCentro3.TabIndex = 4;
-            this.lblCentro3.Text = "label1";
-            // 
-            // lblCentro4
-            // 
-            this.lblCentro4.AutoSize = true;
-            this.lblCentro4.Location = new System.Drawing.Point(132, 182);
-            this.lblCentro4.Name = "lblCentro4";
-            this.lblCentro4.Size = new System.Drawing.Size(35, 13);
-            this.lblCentro4.TabIndex = 5;
-            this.lblCentro4.Text = "label1";
             // 
             // VentanaCliente
             // 
