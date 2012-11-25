@@ -6,24 +6,22 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Libreria;
+using Servicios;
 
 namespace proyecto_cajero
 {
     public partial class VentanaCliente : Form
     {
+        Servicio servicio = new Servicio();
+        List<Cliente> clientes = new List<Cliente>();
         public VentanaCliente()
         {
             InitializeComponent();
+            clientes = servicio.cargarClientes();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

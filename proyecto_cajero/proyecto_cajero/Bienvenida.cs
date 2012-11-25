@@ -16,5 +16,12 @@ namespace proyecto_cajero
             InitializeComponent();
         }
 
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            VentanaCliente ventanaCliente = new VentanaCliente();
+            this.Hide();
+            ventanaCliente.Show();            
+        }
+
     }
 }

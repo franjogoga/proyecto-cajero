@@ -110,6 +110,22 @@
   <ItemGroup>
     <None Include="Resources\linea verde.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_orange_left_clip_art_9095derecha.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bean\Libreria.csproj">
+      <Project>{17947CB5-EE15-4DF2-B3F4-9F1A22D1C1DE}</Project>
+      <Name>Libreria</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
