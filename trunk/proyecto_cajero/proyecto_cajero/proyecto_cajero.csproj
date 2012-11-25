@@ -99,19 +99,10 @@
     <None Include="Resources\i_sistema-bancario-anuncia-entrega-de-tarjetas-de-credito-con-chip-_6518.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\flecha-derecha.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\arrow_orange_left_clip_art_9095derecha.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\der.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\izq.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\der1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\linea roja.png" />

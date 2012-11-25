@@ -49,9 +49,9 @@ namespace Libreria
         {
             this.apellidoMaterno = apellidoPaterno;
         }
-        public string getNombres()
+        public string getApellidoMaterno()
         {
-            return nombres;
+            return apellidoMaterno;
         }
     }
 
@@ -62,27 +62,27 @@ namespace Libreria
      private int clave;
      private string tipo;
      
-        public void setnumero (int numero)
+        public void setNumero (int numero)
         {
             this.numero = numero;
         }
-        public int getnumero()
+        public int getNumero()
         {
             return numero;
         }
-        public void setclave (int clave)
+        public void setClave (int clave)
         {
             this.clave = clave;
         }
-        public int getclave()
+        public int getClave()
         {
             return clave;
         }
-        public void settipo (string tipo)
+        public void setTipo (string tipo)
         {
             this.tipo = tipo;
         }
-        public string gettipo()
+        public string getTipo()
         {
             return tipo;
         }
@@ -93,42 +93,50 @@ namespace Libreria
     {
         private int dni;
         private int nombre;
-        private string apellido;
         private string apellidoPaterno;
+        private string apellidoMaterno;
+        private List<Cuenta> cuentas = null;
 
-        public void setdni (int dni)
+        public void setDni (int dni)
         {
             this.dni = dni;
         }
-        public int getdni()
+        public int getDni()
         {
             return dni;
         }
-        public void setnombre (int nombre)
+        public void setNombre (int nombre)
         {
             this.nombre= nombre;
         }
-        public int getnombre()
+        public int getNombre()
         {
             return nombre;
         }
-        public void setapellido (string apellido)
+        public void setApellidoPaterno (string apellidoPaterno)
         {
-            this.apellido = apellido;
-        }
-        public string getapellido()
-        {
-            return apellido;
-        }
-        public void setapellidoPaterno ( string apellidoPaterno)
-        {
-            this.apellidoPaterno=apellidoPaterno;
+            this.apellidoPaterno = apellidoPaterno;
         }
         public string getapellidoPaterno()
         {
             return apellidoPaterno;
         }
-
+        public void setapellidoMaterno ( string apellidoMaterno)
+        {
+            this.apellidoMaterno=apellidoMaterno;
+        }
+        public string getapellidoMaterno()
+        {
+            return apellidoMaterno;
+        }
+        public void setCuenta(List<Cuenta> cuentas)
+        {
+            this.cuentas = cuentas;
+        }
+        public List<Cuenta> getCuentas()
+        {
+            return cuentas;
+        }
 
     }
 
