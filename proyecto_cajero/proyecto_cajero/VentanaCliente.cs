@@ -9,11 +9,21 @@ using System.Windows.Forms;
 
 namespace proyecto_cajero
 {
-    public partial class Usuario : Form
+    public partial class VentanaCliente : Form
     {
-        public Usuario()
+        public VentanaCliente()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
