@@ -15,5 +15,6 @@ namespace proyecto_cajero
         {
             InitializeComponent();
         }
+
     }
 }

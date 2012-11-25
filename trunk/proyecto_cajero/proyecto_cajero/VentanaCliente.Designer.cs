@@ -1,6 +1,6 @@
 ﻿namespace proyecto_cajero
 {
-    partial class Cliente
+    partial class VentanaCliente
     {
         /// <summary>
         /// Required designer variable.

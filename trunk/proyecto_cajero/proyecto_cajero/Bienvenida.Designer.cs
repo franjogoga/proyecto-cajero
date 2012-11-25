@@ -51,6 +51,7 @@
             this.btnCliente.TabIndex = 1;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // pictureBox1
             // 
@@ -63,7 +64,7 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // Bienvenida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,7 +72,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnUsuario);
-            this.Name = "Form1";
+            this.Name = "Bienvenida";
             this.Text = "Sistema Cajero Automático";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

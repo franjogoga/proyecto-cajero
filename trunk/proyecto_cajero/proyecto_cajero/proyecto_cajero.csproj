@@ -52,28 +52,28 @@
     <Compile Include="Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.cs">
+    <Compile Include="VentanaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuario.Designer.cs">
-      <DependentUpon>Usuario.cs</DependentUpon>
+    <Compile Include="VentanaUsuario.Designer.cs">
+      <DependentUpon>VentanaUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs">
+    <Compile Include="VentanaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="VentanaCliente.Designer.cs">
+      <DependentUpon>VentanaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="VentanaCliente.resx">
+      <DependentUpon>VentanaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuario.resx">
-      <DependentUpon>Usuario.cs</DependentUpon>
+    <EmbeddedResource Include="VentanaUsuario.resx">
+      <DependentUpon>VentanaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
