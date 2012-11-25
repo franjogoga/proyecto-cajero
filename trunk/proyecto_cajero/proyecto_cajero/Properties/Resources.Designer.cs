@@ -67,6 +67,13 @@ namespace proyecto_cajero.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap arrow_orange_left_clip_art_9095derecha1 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_orange_left_clip_art_9095derecha1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap der {
             get {
                 object obj = ResourceManager.GetObject("der", resourceCulture);
@@ -74,16 +81,16 @@ namespace proyecto_cajero.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap der1 {
+        internal static System.Drawing.Bitmap flecha_derecha {
             get {
-                object obj = ResourceManager.GetObject("der1", resourceCulture);
+                object obj = ResourceManager.GetObject("flecha-derecha", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap flecha_derecha {
+        internal static System.Drawing.Bitmap flecha_derecha1 {
             get {
-                object obj = ResourceManager.GetObject("flecha-derecha", resourceCulture);
+                object obj = ResourceManager.GetObject("flecha-derecha1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
