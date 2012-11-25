@@ -1,6 +1,6 @@
 ﻿namespace proyecto_cajero
 {
-    partial class LoginCliente
+    partial class Usuario
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // LoginCliente
+            // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(451, 262);
-            this.Name = "LoginCliente";
-            this.Text = "LoginCliente";
+            this.Name = "Usuario";
+            this.Text = "Usuario";
             this.ResumeLayout(false);
 
         }
