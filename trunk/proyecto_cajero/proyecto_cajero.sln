@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "proyecto_cajero", "proyecto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria", "Bean\Libreria.csproj", "{17947CB5-EE15-4DF2-B3F4-9F1A22D1C1DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios", "Servicios\Servicios.csproj", "{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -39,6 +41,16 @@ Global
 		{17947CB5-EE15-4DF2-B3F4-9F1A22D1C1DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{17947CB5-EE15-4DF2-B3F4-9F1A22D1C1DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{17947CB5-EE15-4DF2-B3F4-9F1A22D1C1DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{840D4D67-1EB4-401F-A014-DB0F57A8E3A7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

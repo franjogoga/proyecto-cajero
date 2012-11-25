@@ -43,13 +43,13 @@
             this.btn0 = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDer4 = new System.Windows.Forms.Button();
+            this.btnDer3 = new System.Windows.Forms.Button();
+            this.btnDer2 = new System.Windows.Forms.Button();
+            this.btnDer1 = new System.Windows.Forms.Button();
+            this.btnIzq4 = new System.Windows.Forms.Button();
+            this.btnIzq3 = new System.Windows.Forms.Button();
+            this.btnIzq2 = new System.Windows.Forms.Button();
             this.btnIzq1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -219,85 +219,85 @@
             this.btnCancelar.TabIndex = 0;
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnDer4
             // 
-            this.button7.BackgroundImage = global::proyecto_cajero.Properties.Resources.izq;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Location = new System.Drawing.Point(474, 210);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(56, 43);
-            this.button7.TabIndex = 1;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnDer4.BackgroundImage = global::proyecto_cajero.Properties.Resources.izq;
+            this.btnDer4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDer4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDer4.Location = new System.Drawing.Point(474, 210);
+            this.btnDer4.Name = "btnDer4";
+            this.btnDer4.Size = new System.Drawing.Size(56, 43);
+            this.btnDer4.TabIndex = 1;
+            this.btnDer4.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnDer3
             // 
-            this.button6.BackgroundImage = global::proyecto_cajero.Properties.Resources.izq;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Location = new System.Drawing.Point(474, 150);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(56, 43);
-            this.button6.TabIndex = 1;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnDer3.BackgroundImage = global::proyecto_cajero.Properties.Resources.izq;
+            this.btnDer3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDer3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDer3.Location = new System.Drawing.Point(474, 150);
+            this.btnDer3.Name = "btnDer3";
+            this.btnDer3.Size = new System.Drawing.Size(56, 43);
+            this.btnDer3.TabIndex = 1;
+            this.btnDer3.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnDer2
             // 
-            this.button5.BackgroundImage = global::proyecto_cajero.Properties.Resources.izq;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Location = new System.Drawing.Point(474, 90);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(56, 43);
-            this.button5.TabIndex = 1;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDer2.BackgroundImage = global::proyecto_cajero.Properties.Resources.izq;
+            this.btnDer2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDer2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDer2.Location = new System.Drawing.Point(474, 90);
+            this.btnDer2.Name = "btnDer2";
+            this.btnDer2.Size = new System.Drawing.Size(56, 43);
+            this.btnDer2.TabIndex = 1;
+            this.btnDer2.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnDer1
             // 
-            this.button4.BackgroundImage = global::proyecto_cajero.Properties.Resources.izq;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Location = new System.Drawing.Point(474, 28);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 43);
-            this.button4.TabIndex = 1;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDer1.BackgroundImage = global::proyecto_cajero.Properties.Resources.izq;
+            this.btnDer1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDer1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDer1.Location = new System.Drawing.Point(474, 28);
+            this.btnDer1.Name = "btnDer1";
+            this.btnDer1.Size = new System.Drawing.Size(56, 43);
+            this.btnDer1.TabIndex = 1;
+            this.btnDer1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnIzq4
             // 
-            this.button2.BackgroundImage = global::proyecto_cajero.Properties.Resources.der;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(8, 210);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 43);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.btnIzq4.BackgroundImage = global::proyecto_cajero.Properties.Resources.der;
+            this.btnIzq4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIzq4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIzq4.Location = new System.Drawing.Point(8, 210);
+            this.btnIzq4.Name = "btnIzq4";
+            this.btnIzq4.Size = new System.Drawing.Size(56, 43);
+            this.btnIzq4.TabIndex = 1;
+            this.btnIzq4.UseVisualStyleBackColor = true;
+            this.btnIzq4.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button3
+            // btnIzq3
             // 
-            this.button3.BackgroundImage = global::proyecto_cajero.Properties.Resources.der;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Location = new System.Drawing.Point(8, 150);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(56, 43);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
+            this.btnIzq3.BackgroundImage = global::proyecto_cajero.Properties.Resources.der;
+            this.btnIzq3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIzq3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIzq3.Location = new System.Drawing.Point(8, 150);
+            this.btnIzq3.Name = "btnIzq3";
+            this.btnIzq3.Size = new System.Drawing.Size(56, 43);
+            this.btnIzq3.TabIndex = 1;
+            this.btnIzq3.UseVisualStyleBackColor = true;
+            this.btnIzq3.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // btnIzq2
             // 
-            this.button1.BackgroundImage = global::proyecto_cajero.Properties.Resources.der;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(8, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 43);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnIzq2.BackgroundImage = global::proyecto_cajero.Properties.Resources.der;
+            this.btnIzq2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIzq2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIzq2.Location = new System.Drawing.Point(8, 90);
+            this.btnIzq2.Name = "btnIzq2";
+            this.btnIzq2.Size = new System.Drawing.Size(56, 43);
+            this.btnIzq2.TabIndex = 1;
+            this.btnIzq2.UseVisualStyleBackColor = true;
+            this.btnIzq2.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnIzq1
             // 
@@ -388,13 +388,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 285);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDer4);
+            this.Controls.Add(this.btnDer3);
+            this.Controls.Add(this.btnDer2);
+            this.Controls.Add(this.btnDer1);
+            this.Controls.Add(this.btnIzq4);
+            this.Controls.Add(this.btnIzq3);
+            this.Controls.Add(this.btnIzq2);
             this.Controls.Add(this.btnIzq1);
             this.Controls.Add(this.panel1);
             this.Name = "Cliente";
@@ -412,14 +412,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnIzq1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnDer1;
+        private System.Windows.Forms.Button btnDer2;
+        private System.Windows.Forms.Button btnDer3;
+        private System.Windows.Forms.Button btnDer4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnIzq2;
+        private System.Windows.Forms.Button btnIzq3;
+        private System.Windows.Forms.Button btnIzq4;
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn9;
