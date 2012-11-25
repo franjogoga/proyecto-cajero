@@ -13,6 +13,7 @@ namespace Libreria
         private string apellidoPaterno;
         private string apellidoMaterno;
 
+        public Usuario() { }
         public void setDni(int dni)
         {
             this.dni = dni;
@@ -58,10 +59,11 @@ namespace Libreria
     public class Cuenta
     {
 
-     private int numero;
-     private int clave;
-     private string tipo;
-     
+        private int numero;
+        private int clave;
+        private string tipo;
+
+        public Cuenta() { }
         public void setNumero (int numero)
         {
             this.numero = numero;
@@ -89,14 +91,15 @@ namespace Libreria
 
     }
 
-    public class CLiente
+    public class Cliente
     {
         private int dni;
-        private int nombre;
+        private string nombre;
         private string apellidoPaterno;
         private string apellidoMaterno;
         private List<Cuenta> cuentas = null;
 
+        public Cliente() { }
         public void setDni (int dni)
         {
             this.dni = dni;
@@ -105,11 +108,11 @@ namespace Libreria
         {
             return dni;
         }
-        public void setNombre (int nombre)
+        public void setNombre (string nombre)
         {
             this.nombre= nombre;
         }
-        public int getNombre()
+        public string getNombre()
         {
             return nombre;
         }
