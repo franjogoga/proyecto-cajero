@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace proyecto_cajero
 {
-    public partial class Form1 : Form
+    public partial class LoginCliente : Form
     {
-        public Form1()
+        public LoginCliente()
         {
             InitializeComponent();
         }
