@@ -58,10 +58,11 @@ namespace Libreria
 
     public class Cuenta
     {
-
         private int numero;
+        private int dni;
         private int clave;
         private string tipo;
+        private float saldo;
 
         public Cuenta() { }
         public void setNumero (int numero)
@@ -71,6 +72,14 @@ namespace Libreria
         public int getNumero()
         {
             return numero;
+        }
+        public void setDni(int dni)
+        {
+            this.dni = dni;
+        }
+        public int getDni()
+        {
+            return dni;
         }
         public void setClave (int clave)
         {
@@ -88,7 +97,14 @@ namespace Libreria
         {
             return tipo;
         }
-
+        public void setSaldo(float saldo)
+        {
+            this.saldo = saldo;
+        }
+        public float getSaldo()
+        {
+            return saldo;
+        }
     }
 
     public class Cliente
@@ -96,8 +112,7 @@ namespace Libreria
         private int dni;
         private string nombre;
         private string apellidoPaterno;
-        private string apellidoMaterno;
-        private List<Cuenta> cuentas = null;
+        private string apellidoMaterno;        
 
         public Cliente() { }
         public void setDni (int dni)
@@ -131,16 +146,6 @@ namespace Libreria
         public string getapellidoMaterno()
         {
             return apellidoMaterno;
-        }
-        public void setCuenta(List<Cuenta> cuentas)
-        {
-            this.cuentas = cuentas;
-        }
-        public List<Cuenta> getCuentas()
-        {
-            return cuentas;
-        }
-
+        }        
     }
-
 }
