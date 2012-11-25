@@ -72,7 +72,7 @@
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.btnUsuario);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Sistema Cajero Automático";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
