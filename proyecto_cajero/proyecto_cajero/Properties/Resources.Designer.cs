@@ -60,9 +60,58 @@ namespace proyecto_cajero.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap arrow_orange_left_clip_art_9095derecha {
+            get {
+                object obj = ResourceManager.GetObject("arrow_orange_left_clip_art_9095derecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap der {
+            get {
+                object obj = ResourceManager.GetObject("der", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap der1 {
+            get {
+                object obj = ResourceManager.GetObject("der1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap flecha_derecha {
+            get {
+                object obj = ResourceManager.GetObject("flecha-derecha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap i_sistema_bancario_anuncia_entrega_de_tarjetas_de_credito_con_chip__6518 {
             get {
                 object obj = ResourceManager.GetObject("i_sistema-bancario-anuncia-entrega-de-tarjetas-de-credito-con-chip-_6518", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap izq {
+            get {
+                object obj = ResourceManager.GetObject("izq", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap linea_roja {
+            get {
+                object obj = ResourceManager.GetObject("linea roja", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap linea_verde {
+            get {
+                object obj = ResourceManager.GetObject("linea verde", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
