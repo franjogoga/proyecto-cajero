@@ -261,6 +261,7 @@
             // 
             // btn3
             // 
+            this.btn3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.Location = new System.Drawing.Point(146, 28);
             this.btn3.Name = "btn3";
@@ -272,6 +273,7 @@
             // 
             // btn2
             // 
+            this.btn2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.Location = new System.Drawing.Point(81, 28);
             this.btn2.Name = "btn2";
@@ -283,6 +285,7 @@
             // 
             // btn9
             // 
+            this.btn9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.Location = new System.Drawing.Point(146, 138);
             this.btn9.Name = "btn9";
@@ -294,6 +297,7 @@
             // 
             // btn8
             // 
+            this.btn8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.Location = new System.Drawing.Point(81, 138);
             this.btn8.Name = "btn8";
@@ -305,6 +309,7 @@
             // 
             // btn6
             // 
+            this.btn6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.Location = new System.Drawing.Point(146, 80);
             this.btn6.Name = "btn6";
@@ -316,6 +321,7 @@
             // 
             // btn5
             // 
+            this.btn5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.Location = new System.Drawing.Point(81, 80);
             this.btn5.Name = "btn5";
@@ -329,6 +335,7 @@
             // 
             this.btnAceptar.BackgroundImage = global::proyecto_cajero.Properties.Resources.linea_verde;
             this.btnAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAceptar.Location = new System.Drawing.Point(146, 198);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(46, 41);
@@ -338,6 +345,7 @@
             // 
             // btn0
             // 
+            this.btn0.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.Location = new System.Drawing.Point(82, 198);
             this.btn0.Name = "btn0";
@@ -351,6 +359,7 @@
             // 
             this.btnCancelar.BackgroundImage = global::proyecto_cajero.Properties.Resources.linea_roja;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.Location = new System.Drawing.Point(18, 198);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(46, 41);
@@ -360,6 +369,7 @@
             // 
             // btn7
             // 
+            this.btn7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.Location = new System.Drawing.Point(18, 138);
             this.btn7.Name = "btn7";
@@ -371,6 +381,7 @@
             // 
             // btn4
             // 
+            this.btn4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.Location = new System.Drawing.Point(18, 80);
             this.btn4.Name = "btn4";
@@ -382,6 +393,7 @@
             // 
             // btn1
             // 
+            this.btn1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.Location = new System.Drawing.Point(18, 28);
             this.btn1.Name = "btn1";

@@ -29,6 +29,7 @@ namespace proyecto_cajero
         int flagLoginCuenta = 0;
         int flagLoginClave = 0;
         int flagOpciones = 0;
+        int flagSaldo = 0;
         int flagDeposito = 0;
         int flagMontoDeposito = 0;
         int flagRetiro = 0;
@@ -338,7 +339,8 @@ namespace proyecto_cajero
                     lblIzq2.Text = "Depósitos";
                     lblDer2.Text = "Retiros";
                     lblIzq3.Text = "Pagos";
-                    lblDer3.Text = "Transferencias";                    
+                    lblDer3.Text = "Transferencias";
+                    lblIzq4.Text = "Saldos";
                 }
                 else
                 {
@@ -398,8 +400,7 @@ namespace proyecto_cajero
         }
 
         private void btnDer4_Click(object sender, EventArgs e)
-        {
-            
+        {            
             if (flagMensajeMontoDeposito == 1)
             {
                 flagMensajeMontoDeposito = 0;                
@@ -419,6 +420,7 @@ namespace proyecto_cajero
                 lblDer2.Text = "Retiros";
                 lblIzq3.Text = "Pagos";
                 lblDer3.Text = "Transferencias";
+                lblIzq4.Text = "Saldos";
                 return;
             }
         }
@@ -431,6 +433,7 @@ namespace proyecto_cajero
                 flagLoginCuenta = 1;
                 numeroCuenta = 0;
                 clave = 0;
+                dni = 0;
                 strClave = "";
                 strClaveX = "";
                 strCuenta = "";
@@ -450,6 +453,27 @@ namespace proyecto_cajero
                 lblDer3.Text = "";
                 lblDer4.Text = "";
                 return;
+            }
+            if (flagOpciones == 1)
+            {
+                flagOpciones = 0;
+                flagSaldo = 1;
+                dni = servicio.buscaCuenta(numeroCuenta).getDni();
+                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+                lblCentro1.Text = "Su numero de cuenta "+ numeroCuenta+ " tiene";
+                lblCuenta.Text = "";
+                lblClave.Text = "";
+                lblCentro2.Text = "S/. " + servicio.buscaCuenta(numeroCuenta).getSaldo() + " disponibles";
+                lblCentro3.Text = "";
+                lblCentro4.Text = "";
+                lblIzq1.Text = "";
+                lblIzq2.Text = "";
+                lblIzq3.Text = "";
+                lblIzq4.Text = "Salir";
+                lblDer1.Text = "";
+                lblDer2.Text = "";
+                lblDer3.Text = "";
+                lblDer4.Text = "Otra transacción";
             }
         }
 
