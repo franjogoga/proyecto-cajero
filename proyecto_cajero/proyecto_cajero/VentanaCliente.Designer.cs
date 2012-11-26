@@ -436,6 +436,7 @@
             this.btnDer2.Size = new System.Drawing.Size(56, 43);
             this.btnDer2.TabIndex = 1;
             this.btnDer2.UseVisualStyleBackColor = true;
+            this.btnDer2.Click += new System.EventHandler(this.btnDer2_Click);
             // 
             // btnDer1
             // 
