@@ -64,6 +64,8 @@
             this.btnIzq3 = new System.Windows.Forms.Button();
             this.btnIzq2 = new System.Windows.Forms.Button();
             this.btnIzq1 = new System.Windows.Forms.Button();
+            this.lblCuenta = new System.Windows.Forms.Label();
+            this.lblClave = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -81,6 +83,8 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel2.Controls.Add(this.lblCentro4);
+            this.panel2.Controls.Add(this.lblClave);
+            this.panel2.Controls.Add(this.lblCuenta);
             this.panel2.Controls.Add(this.lblCentro3);
             this.panel2.Controls.Add(this.lblBienvenido);
             this.panel2.Controls.Add(this.lblCentro2);
@@ -102,29 +106,29 @@
             // lblCentro4
             // 
             this.lblCentro4.AutoSize = true;
-            this.lblCentro4.Location = new System.Drawing.Point(117, 180);
+            this.lblCentro4.Location = new System.Drawing.Point(187, 166);
             this.lblCentro4.Name = "lblCentro4";
-            this.lblCentro4.Size = new System.Drawing.Size(10, 13);
+            this.lblCentro4.Size = new System.Drawing.Size(31, 13);
             this.lblCentro4.TabIndex = 5;
-            this.lblCentro4.Text = ".";
+            this.lblCentro4.Text = "____";
             // 
             // lblCentro3
             // 
             this.lblCentro3.AutoSize = true;
-            this.lblCentro3.Location = new System.Drawing.Point(117, 138);
+            this.lblCentro3.Location = new System.Drawing.Point(187, 128);
             this.lblCentro3.Name = "lblCentro3";
-            this.lblCentro3.Size = new System.Drawing.Size(10, 13);
+            this.lblCentro3.Size = new System.Drawing.Size(43, 13);
             this.lblCentro3.TabIndex = 4;
-            this.lblCentro3.Text = ".";
+            this.lblCentro3.Text = "______";
             // 
             // lblBienvenido
             // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Location = new System.Drawing.Point(130, 16);
+            this.lblBienvenido.Location = new System.Drawing.Point(14, 16);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(115, 13);
+            this.lblBienvenido.Size = new System.Drawing.Size(365, 13);
             this.lblBienvenido.TabIndex = 3;
             this.lblBienvenido.Text = "Bienvenido a su cajero";
+            this.lblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCentro2
             // 
@@ -447,6 +451,24 @@
             this.btnIzq1.TabIndex = 1;
             this.btnIzq1.UseVisualStyleBackColor = true;
             // 
+            // lblCuenta
+            // 
+            this.lblCuenta.AutoSize = true;
+            this.lblCuenta.Location = new System.Drawing.Point(75, 128);
+            this.lblCuenta.Name = "lblCuenta";
+            this.lblCuenta.Size = new System.Drawing.Size(102, 13);
+            this.lblCuenta.TabIndex = 4;
+            this.lblCuenta.Text = "Numero de Cuenta :";
+            // 
+            // lblClave
+            // 
+            this.lblClave.AutoSize = true;
+            this.lblClave.Location = new System.Drawing.Point(75, 166);
+            this.lblClave.Name = "lblClave";
+            this.lblClave.Size = new System.Drawing.Size(103, 13);
+            this.lblClave.TabIndex = 4;
+            this.lblClave.Text = "Clave                      :";
+            // 
             // VentanaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,6 +532,8 @@
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.Label lblCentro4;
         private System.Windows.Forms.Label lblCentro3;
+        private System.Windows.Forms.Label lblClave;
+        private System.Windows.Forms.Label lblCuenta;
 
 
     }
