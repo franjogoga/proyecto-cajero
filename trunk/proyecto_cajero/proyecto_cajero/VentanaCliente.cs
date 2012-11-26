@@ -253,6 +253,7 @@ namespace proyecto_cajero
                     lblClave.Text = "";
 
 
+
                 }
                 else
                 {
