@@ -97,21 +97,13 @@ namespace Servicios
             return valido;
         }
 
-        public int convierteNumeroCuenta(string strCuenta)
+        public int convierteNumero(string strNumero)
         {
-            if (strCuenta.Equals(""))
+            if (strNumero.Equals(""))
                 return 0;
             else
-                return int.Parse(strCuenta);
-        }
-
-        public int convierteClave(string strClave)
-        {
-            if (strClave.Equals(""))
-                return 0;
-            else
-                return int.Parse(strClave);
-        }
+                return int.Parse(strNumero);
+        }        
 
         public Cuenta buscaCuenta(int numeroCuenta)
         {

@@ -19,13 +19,18 @@ namespace proyecto_cajero
         string strCuenta = "";
         string strClave = "";
         string strClaveX = "";
+        string strMontoDeposito = "";
         int numeroCuenta = 0;
+        float saldo = 0;
         int clave = 0;
         int dni = 0;
+        int flagMensajeMontoDeposito = 0;
+        int montoDeposito = 0;
         int flagLoginCuenta = 0;
         int flagLoginClave = 0;
         int flagOpciones = 0;
         int flagDeposito = 0;
+        int flagMontoDeposito = 0;
         int flagRetiro = 0;
         int flagPagos = 0;
         int vecesLogin = 0;
@@ -53,6 +58,12 @@ namespace proyecto_cajero
                 lblCentro4.Text = strClaveX;
                 return;
             }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "1";
+                lblCentro2.Text = strMontoDeposito;
+                return;
+            }
         }
 
         private void btn2_Click(object sender, EventArgs e)
@@ -68,6 +79,12 @@ namespace proyecto_cajero
                 strClave = strClave + "2";
                 strClaveX = strClaveX + "*";
                 lblCentro4.Text = strClaveX;
+                return;
+            }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "2";
+                lblCentro2.Text = strMontoDeposito;
                 return;
             }
         }
@@ -87,6 +104,12 @@ namespace proyecto_cajero
                 lblCentro4.Text = strClaveX;
                 return;
             }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "3";
+                lblCentro2.Text = strMontoDeposito;
+                return;
+            }
         }
 
         private void btn4_Click(object sender, EventArgs e)
@@ -102,6 +125,12 @@ namespace proyecto_cajero
                 strClave = strClave + "4";
                 strClaveX = strClaveX + "*";
                 lblCentro4.Text = strClaveX;
+                return;
+            }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "4";
+                lblCentro2.Text = strMontoDeposito;
                 return;
             }
         }
@@ -121,6 +150,12 @@ namespace proyecto_cajero
                 lblCentro4.Text = strClaveX;
                 return;
             }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "5";
+                lblCentro2.Text = strMontoDeposito;
+                return;
+            }
         }
 
         private void btn6_Click(object sender, EventArgs e)
@@ -138,6 +173,12 @@ namespace proyecto_cajero
                 lblCentro4.Text = strClaveX;
                 return;
             }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "6";
+                lblCentro2.Text = strMontoDeposito;
+                return;
+            }
         }
         private void btn7_Click(object sender, EventArgs e)
         {
@@ -152,6 +193,12 @@ namespace proyecto_cajero
                 strClave = strClave + "7";
                 strClaveX = strClaveX + "*";
                 lblCentro4.Text = strClaveX;
+                return;
+            }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "7";
+                lblCentro2.Text = strMontoDeposito;
                 return;
             }
         }
@@ -171,6 +218,12 @@ namespace proyecto_cajero
                 lblCentro4.Text = strClaveX;
                 return;
             }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "8";
+                lblCentro2.Text = strMontoDeposito;
+                return;
+            }
         }
 
         private void btn9_Click(object sender, EventArgs e)
@@ -186,6 +239,12 @@ namespace proyecto_cajero
                 strClave = strClave + "9";
                 strClaveX = strClaveX + "*";
                 lblCentro4.Text = strClaveX;
+                return;
+            }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "9";
+                lblCentro2.Text = strMontoDeposito;
                 return;
             }
         }
@@ -205,6 +264,12 @@ namespace proyecto_cajero
                 lblCentro4.Text = strClaveX;
                 return;
             }
+            if (flagMontoDeposito == 1)
+            {
+                strMontoDeposito = strMontoDeposito + "0";
+                lblCentro2.Text = strMontoDeposito;
+                return;
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -222,6 +287,24 @@ namespace proyecto_cajero
                 lblCentro4.Text = "";
                 return;
             }
+            if (flagMontoDeposito == 1)
+            {
+                flagMontoDeposito = 0;
+                flagDeposito = 1;
+                lblBienvenido.Text = "";
+                lblCentro1.Text = "";
+                lblCentro2.Text = "";
+                lblIzq1.Text = "S/. 10";
+                lblIzq2.Text = "S/. 20";
+                lblIzq3.Text = "S/. 50";
+                lblIzq4.Text = "S/. 100";
+                lblDer1.Text = "S/. 200";
+                lblDer2.Text = "S/. 500";
+                lblDer3.Text = "S/. 1000";
+                lblDer4.Text = "Otro monto";                
+                strMontoDeposito = "";
+                return;
+            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
@@ -236,8 +319,8 @@ namespace proyecto_cajero
             {
                 vecesLogin = vecesLogin + 1;                
 
-                numeroCuenta = servicio.convierteNumeroCuenta(strCuenta);
-                clave = servicio.convierteClave(strClave);
+                numeroCuenta = servicio.convierteNumero(strCuenta);
+                clave = servicio.convierteNumero(strClave);
                 if (servicio.validarCuenta(numeroCuenta, clave))
                 {
                     flagLoginCuenta = 0;
@@ -252,9 +335,10 @@ namespace proyecto_cajero
                     lblCuenta.Text = "";
                     lblClave.Text = "";
 
-
-
-
+                    lblIzq2.Text = "Depósitos";
+                    lblDer2.Text = "Retiros";
+                    lblIzq3.Text = "Pagos";
+                    lblDer3.Text = "Transferencias";                    
                 }
                 else
                 {
@@ -274,6 +358,97 @@ namespace proyecto_cajero
                     lblCentro3.Text = strCuenta;
                     lblCentro4.Text = "";
                 }
+                return;
+            }
+            if (flagMontoDeposito == 1)
+            {
+                flagMontoDeposito = 0;
+                saldo = servicio.buscaCuenta(numeroCuenta).getSaldo();
+                saldo = saldo + servicio.convierteNumero(strMontoDeposito);
+                servicio.buscaCuenta(numeroCuenta).setSaldo(saldo);
+                lblBienvenido.Text = "";
+                lblCentro1.Text = "";
+                lblCentro2.Text = "Se han ingresado " + strMontoDeposito + " a su cuenta";
+                strMontoDeposito = "";
+                lblIzq4.Text = "Salir";
+                lblDer4.Text = "Otra Transacción";
+                flagMensajeMontoDeposito = 1;
+                return;
+            }
+        }
+
+        private void btnIzq2_Click(object sender, EventArgs e)
+        {           
+            if (flagOpciones == 1)
+            {
+                flagOpciones = 0;                
+                flagMontoDeposito = 1;
+                lblCentro1.Text = "Ingrese el monto del depósito";
+                lblCentro2.Text = "______";
+                lblIzq1.Text = "";
+                lblIzq2.Text = "";
+                lblIzq3.Text = "";
+                lblIzq4.Text = "";
+                lblDer1.Text = "";
+                lblDer2.Text = "";
+                lblDer3.Text = "";
+                lblDer4.Text = "";
+                return;
+            }                    
+        }
+
+        private void btnDer4_Click(object sender, EventArgs e)
+        {
+            
+            if (flagMensajeMontoDeposito == 1)
+            {
+                flagMensajeMontoDeposito = 0;                
+                flagLoginCuenta = 0;
+                flagLoginClave = 0;
+                flagOpciones = 1;
+                dni = servicio.buscaCuenta(numeroCuenta).getDni();
+                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+                lblCentro1.Text = "Seleccione una operación";
+                lblCentro2.Text = "";
+                lblCentro3.Text = "";
+                lblCentro4.Text = "";
+                lblCuenta.Text = "";
+                lblClave.Text = "";
+
+                lblIzq2.Text = "Depósitos";
+                lblDer2.Text = "Retiros";
+                lblIzq3.Text = "Pagos";
+                lblDer3.Text = "Transferencias";
+                return;
+            }
+        }
+
+        private void btnIzq4_Click(object sender, EventArgs e)
+        {
+            if (flagMensajeMontoDeposito == 1)
+            {
+                flagMensajeMontoDeposito = 0;
+                flagLoginCuenta = 1;
+                numeroCuenta = 0;
+                clave = 0;
+                strClave = "";
+                strClaveX = "";
+                strCuenta = "";
+                lblBienvenido.Text = "Bienvenido a su cajero";
+                lblCentro1.Text = "Ingrese su numero de cuenta";
+                lblCuenta.Text = "Numero de Cuenta :";
+                lblClave.Text = "Clave                           :";
+                lblCentro2.Text = "";
+                lblCentro3.Text = "______";
+                lblCentro4.Text = "____";
+                lblIzq1.Text = "";
+                lblIzq2.Text = "";
+                lblIzq3.Text = "";
+                lblIzq4.Text = "";
+                lblDer1.Text = "";
+                lblDer2.Text = "";
+                lblDer3.Text = "";
+                lblDer4.Text = "";
                 return;
             }
         }
