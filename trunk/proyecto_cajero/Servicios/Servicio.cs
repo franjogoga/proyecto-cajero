@@ -8,10 +8,12 @@ namespace Servicios
 {
     public class Servicio
     {
+        List<Usuario> usuarios = new List<Usuario>();
+        List<Cuenta> cuentas = new List<Cuenta>();
+        List<Cliente> clientes = new List<Cliente>();
+
         public List<Usuario> cargarUsuarios()
-        {
-            List<Usuario> usuarios = new List<Usuario>();
-            
+        {                        
             Usuario u1 = new Usuario();
             u1.setDni(12345678);
             u1.setClave(1234);
@@ -32,9 +34,7 @@ namespace Servicios
         }
 
         public List<Cuenta> cargarCuentas()
-        {
-            List<Cuenta> cuentas = new List<Cuenta>();
-
+        {            
             Cuenta c1 = new Cuenta();
             c1.setNumero(112233);
             c1.setDni(11111111);
@@ -64,9 +64,7 @@ namespace Servicios
         }
 
         public List<Cliente> cargarClientes()
-        {
-            List<Cliente> clientes = new List<Cliente>();
-
+        {            
             Cliente c1 = new Cliente();
             c1.setDni(11111111);
             c1.setNombre("Pepito");
@@ -77,30 +75,62 @@ namespace Servicios
             c2.setDni(22222222);
             c2.setNombre("Esteban");
             c2.setApellidoPaterno("Dido");
-            c2.setapellidoMaterno("Mesa");                                   
+            c2.setapellidoMaterno("Mesa");
+
+            clientes.Add(c1);
+            clientes.Add(c2);
 
             return clientes;
         }
 
-        public bool validarCuenta(string strCuenta, string strClave)
+        public bool validarCuenta(int numeroCuenta, int clave)
         {
             bool valido = false;
-            int cuenta;
-            int clave;
-            if (strCuenta.Equals(""))            
-                cuenta = 0;            
-            else
-                cuenta = int.Parse(strCuenta);
-
-            if (strClave.Equals(""))
-                clave = 0;
-            else
-                clave = int.Parse(strClave);
-
-
-
-
+            Cuenta cuenta = buscaCuenta(numeroCuenta);
+            if (cuenta == null)            
+                valido = false;            
+            else            
+                if (clave == cuenta.getClave())
+                    valido = true;
+                else
+                    valido = false;            
             return valido;
         }
+
+        public int convierteNumeroCuenta(string strCuenta)
+        {
+            if (strCuenta.Equals(""))
+                return 0;
+            else
+                return int.Parse(strCuenta);
+        }
+
+        public int convierteClave(string strClave)
+        {
+            if (strClave.Equals(""))
+                return 0;
+            else
+                return int.Parse(strClave);
+        }
+
+        public Cuenta buscaCuenta(int numeroCuenta)
+        {
+            Cuenta cuenta=null;
+            foreach (Cuenta c in cuentas)            
+                if (numeroCuenta == c.getNumero())                
+                    cuenta = c;                            
+            return cuenta;
+        }
+
+        public Cliente buscaCliente(int dniCliente)
+        {
+            Cliente cliente = null;
+            foreach (Cliente c in clientes)
+                if (dniCliente == c.getDni())
+                    cliente = c;
+            return cliente;
+        }
+
+
     }
 }
