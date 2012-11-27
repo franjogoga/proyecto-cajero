@@ -535,6 +535,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "VentanaCliente";
             this.Text = "Cliente";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VentanaCliente_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

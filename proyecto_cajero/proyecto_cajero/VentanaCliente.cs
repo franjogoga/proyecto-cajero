@@ -13,6 +13,7 @@ namespace proyecto_cajero
 {
     public partial class VentanaCliente : Form
     {
+        Bienvenida bienvenida = null;
         Servicio servicio = new Servicio();
         List<Cliente> clientes = new List<Cliente>();
         List<Cuenta> cuentas = new List<Cuenta>();
@@ -50,7 +51,14 @@ namespace proyecto_cajero
             cargaPanelLogin();
             flagLoginCuenta = 1;
         }
-
+        public void setBienvenida(Bienvenida bienvenida)
+        {
+            this.bienvenida = bienvenida;
+        }
+        public Bienvenida getBienvenida()
+        {
+            return bienvenida;
+        }
         public void cargaPanelLogin()
         {
             lblBienvenido.Text = "Bienvenido a su cajero";
@@ -893,6 +901,12 @@ namespace proyecto_cajero
                 cargaPanelPagos();
                 return;
             }
+        }
+
+        private void VentanaCliente_FormClosing(object sender, FormClosingEventArgs e)
+        {            
+            this.Dispose();
+            bienvenida.Show();
         }
 
 
