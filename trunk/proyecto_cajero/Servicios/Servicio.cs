@@ -126,6 +126,28 @@ namespace Servicios
             return cliente;
         }
 
+        public List<Cuenta> consultaCuentaPorTipo(string tipo)
+        {
+            List<Cuenta> consulta = new List<Cuenta>();
+            foreach (Cuenta c in cuentas)
+            {        
+                if ( c.getTipo().ToUpper().Equals( tipo.ToUpper() ) )
+                    consulta.Add(c);                                               
+            }
+            return consulta;
+        }
+
+        public List<Cuenta> consultaCuentaPorMoneda(string tipo)
+        {
+            List<Cuenta> consulta = new List<Cuenta>();
+            foreach (Cuenta c in cuentas)
+            {
+                if (c.getMoneda().ToUpper().Equals(tipo.ToUpper()))
+                    consulta.Add(c);
+            }
+            return consulta;
+        }
+       
 
     }
 }
