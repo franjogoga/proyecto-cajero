@@ -83,12 +83,12 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.lblCentro2);
             this.panel2.Controls.Add(this.lblDer1);
             this.panel2.Controls.Add(this.lblCentro4);
             this.panel2.Controls.Add(this.lblClave);
             this.panel2.Controls.Add(this.lblCuenta);
             this.panel2.Controls.Add(this.lblCentro3);
-            this.panel2.Controls.Add(this.lblCentro1);
             this.panel2.Controls.Add(this.lblDer4);
             this.panel2.Controls.Add(this.lblDer3);
             this.panel2.Controls.Add(this.lblDer2);
@@ -97,7 +97,7 @@
             this.panel2.Controls.Add(this.lblIzq2);
             this.panel2.Controls.Add(this.lblIzq1);
             this.panel2.Controls.Add(this.lblBienvenido);
-            this.panel2.Controls.Add(this.lblCentro2);
+            this.panel2.Controls.Add(this.lblCentro1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -157,20 +157,22 @@
             // 
             // lblCentro2
             // 
+            this.lblCentro2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lblCentro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCentro2.Location = new System.Drawing.Point(39, 94);
+            this.lblCentro2.Location = new System.Drawing.Point(69, 94);
             this.lblCentro2.Name = "lblCentro2";
-            this.lblCentro2.Size = new System.Drawing.Size(303, 26);
+            this.lblCentro2.Size = new System.Drawing.Size(256, 26);
             this.lblCentro2.TabIndex = 2;
             this.lblCentro2.Text = "_____";
             this.lblCentro2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblCentro1
             // 
+            this.lblCentro1.BackColor = System.Drawing.Color.Transparent;
             this.lblCentro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCentro1.Location = new System.Drawing.Point(31, 64);
+            this.lblCentro1.Location = new System.Drawing.Point(14, 64);
             this.lblCentro1.Name = "lblCentro1";
-            this.lblCentro1.Size = new System.Drawing.Size(320, 30);
+            this.lblCentro1.Size = new System.Drawing.Size(367, 30);
             this.lblCentro1.TabIndex = 1;
             this.lblCentro1.Text = "__";
             this.lblCentro1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -178,9 +180,9 @@
             // lblDer4
             // 
             this.lblDer4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDer4.Location = new System.Drawing.Point(293, 210);
+            this.lblDer4.Location = new System.Drawing.Point(198, 210);
             this.lblDer4.Name = "lblDer4";
-            this.lblDer4.Size = new System.Drawing.Size(88, 16);
+            this.lblDer4.Size = new System.Drawing.Size(183, 16);
             this.lblDer4.TabIndex = 0;
             this.lblDer4.Text = "__";
             this.lblDer4.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -197,6 +199,7 @@
             // 
             // lblDer2
             // 
+            this.lblDer2.BackColor = System.Drawing.Color.Transparent;
             this.lblDer2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDer2.Location = new System.Drawing.Point(287, 94);
             this.lblDer2.Name = "lblDer2";
@@ -228,6 +231,7 @@
             // lblIzq2
             // 
             this.lblIzq2.AutoSize = true;
+            this.lblIzq2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.lblIzq2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIzq2.Location = new System.Drawing.Point(11, 94);
             this.lblIzq2.Name = "lblIzq2";
@@ -247,6 +251,7 @@
             // 
             // lblBienvenido
             // 
+            this.lblBienvenido.BackColor = System.Drawing.Color.Transparent;
             this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBienvenido.Location = new System.Drawing.Point(28, 23);
             this.lblBienvenido.Name = "lblBienvenido";

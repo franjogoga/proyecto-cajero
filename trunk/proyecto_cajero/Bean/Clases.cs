@@ -62,6 +62,7 @@ namespace Libreria
         private int dni;
         private int clave;
         private string tipo;
+        private string moneda;
         private float saldo;
 
         public Cuenta() { }
@@ -96,6 +97,14 @@ namespace Libreria
         public string getTipo()
         {
             return tipo;
+        }
+        public void setMoneda(string moneda)
+        {
+            this.moneda = moneda;
+        }
+        public string getMoneda()
+        {
+            return moneda;
         }
         public void setSaldo(float saldo)
         {

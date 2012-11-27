@@ -41,6 +41,7 @@ namespace Servicios
             c1.setClave(1122);
             c1.setTipo("Ahorro");
             c1.setSaldo(200.8f);
+            c1.setMoneda("soles");
 
             Cuenta c2= new Cuenta();
             c2.setNumero(112234);
@@ -48,13 +49,15 @@ namespace Servicios
             c2.setClave(1123);
             c2.setTipo("Corriente");
             c2.setSaldo(500.1f);
+            c2.setMoneda("soles");
 
             Cuenta c3 = new Cuenta();
             c3.setNumero(223344);
             c3.setDni(22222222);
             c3.setClave(2233);
             c3.setTipo("Ahorro");
-            c3.setSaldo(50.3f);
+            c3.setSaldo(5000.3f);
+            c3.setMoneda("dolares");
 
             cuentas.Add(c1);
             cuentas.Add(c2);
