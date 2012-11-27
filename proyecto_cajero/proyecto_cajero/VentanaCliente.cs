@@ -110,7 +110,7 @@ namespace proyecto_cajero
         {
             lblBienvenido.Text = "";
             lblCentro1.Text = "";
-            lblCentro2.Text = "Se han ingresado S/. " + strMontoDeposito + " a su cuenta";
+            lblCentro2.Text = "Se han ingresado " +strMontoDeposito+ " "+servicio.buscaCuenta(numeroCuenta).getMoneda() + " a su cuenta";
             lblCentro3.Text = "";
             lblCentro4.Text = "";
             lblCuenta.Text = "";
@@ -182,7 +182,7 @@ namespace proyecto_cajero
         {
             lblBienvenido.Text = "";
             lblCentro1.Text = "";
-            lblCentro2.Text = "Ud. ha retirado S/. " + strMontoRetiro + " de su cuenta";
+            lblCentro2.Text = "Ud. ha retirado " + strMontoRetiro + " "+ servicio.buscaCuenta(numeroCuenta).getMoneda() + " de su cuenta";
             lblCentro3.Text = "";
             lblCentro4.Text = "";
             lblCuenta.Text = "";
@@ -200,8 +200,8 @@ namespace proyecto_cajero
         {
             lblBienvenido.Text = "";
             lblCentro1.Text = "";
-            lblCentro2.Text = "Ud. ha pagado S/. " + strMontoPagoAgua + "";
-            lblCentro3.Text = "del servicio de agua";
+            lblCentro2.Text = "Ud. ha pagado " + strMontoPagoAgua + " " + servicio.buscaCuenta(numeroCuenta).getMoneda();
+            lblCentro3.Text = "al servicio de agua";
             lblCentro4.Text = "";
             lblCuenta.Text = "";
             lblClave.Text = "";
@@ -219,7 +219,7 @@ namespace proyecto_cajero
             dni = servicio.buscaCuenta(numeroCuenta).getDni();
             lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
             lblCentro1.Text = "Su numero de cuenta " + numeroCuenta + " tiene";            
-            lblCentro2.Text = "S/. " + servicio.buscaCuenta(numeroCuenta).getSaldo() + " disponibles";
+            lblCentro2.Text = " " + servicio.buscaCuenta(numeroCuenta).getSaldo() + " " + servicio.buscaCuenta(numeroCuenta).getMoneda() + " disponibles";
             lblCentro3.Text = "";
             lblCentro4.Text = "";
             lblCuenta.Text = "";
