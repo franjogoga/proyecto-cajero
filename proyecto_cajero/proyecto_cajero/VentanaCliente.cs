@@ -21,6 +21,7 @@ namespace proyecto_cajero
         string strClaveX = "";
         string strMontoDeposito = "";
         string strMontoRetiro = "";
+        string strMontoPagoAgua = "";
         int numeroCuenta = 0;
         float saldo = 0;
         int clave = 0;
@@ -36,7 +37,10 @@ namespace proyecto_cajero
         int flagMontoDeposito = 0;
         int flagRetiro = 0;
         int flagPagos = 0;
+        int flagPagoAgua = 0;
+        int montoPagoAgua = 0;
         int vecesLogin = 0;
+        int flagMensajePagoAgua = 0;
 
         public VentanaCliente()
         {
@@ -173,13 +177,31 @@ namespace proyecto_cajero
             lblDer2.Text = "";
             lblDer3.Text = "";            
             lblDer4.Text = "Otra Transacción";
-        }
+        }        
         public void cargaPanelRetiroValido()
         {
             lblBienvenido.Text = "";
             lblCentro1.Text = "";
             lblCentro2.Text = "Ud. ha retirado S/. " + strMontoRetiro + " de su cuenta";
             lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "Salir";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "Otra Transacción";
+        }
+        public void cargaPanelPagoAguaValido()
+        {
+            lblBienvenido.Text = "";
+            lblCentro1.Text = "";
+            lblCentro2.Text = "Ud. ha pagado S/. " + strMontoPagoAgua + "";
+            lblCentro3.Text = "del servicio de agua";
             lblCentro4.Text = "";
             lblCuenta.Text = "";
             lblClave.Text = "";
@@ -209,7 +231,43 @@ namespace proyecto_cajero
             lblDer1.Text = "";
             lblDer2.Text = "";
             lblDer3.Text = "";
-            lblDer4.Text = "Otra transacción";
+            lblDer4.Text = "Otra Transacción";
+        }
+        public void cargaPanelPagos()
+        {
+            lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+            lblCentro1.Text = "Seleccione el servicio a pagar";
+            lblCentro2.Text = "";
+            lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "Agua";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "";
+        }
+        public void cargaPanelPagoAgua()
+        {
+            lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+            lblCentro1.Text = "Ingrese el monto del pago";
+            lblCentro2.Text = "______";
+            lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "";
         }
         private void btn1_Click(object sender, EventArgs e)
         {
@@ -236,6 +294,12 @@ namespace proyecto_cajero
             {
                 strMontoRetiro = strMontoRetiro + "1";
                 lblCentro2.Text = strMontoRetiro;
+                return;
+            }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "1";
+                lblCentro2.Text = strMontoPagoAgua;
                 return;
             }
         }
@@ -267,6 +331,12 @@ namespace proyecto_cajero
                 lblCentro2.Text = strMontoRetiro;
                 return;
             }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "2";
+                lblCentro2.Text = strMontoPagoAgua;
+                return;
+            }
         }
 
         private void btn3_Click(object sender, EventArgs e)
@@ -294,6 +364,12 @@ namespace proyecto_cajero
             {
                 strMontoRetiro = strMontoRetiro + "3";
                 lblCentro2.Text = strMontoRetiro;
+                return;
+            }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "3";
+                lblCentro2.Text = strMontoPagoAgua;
                 return;
             }
         }
@@ -325,6 +401,12 @@ namespace proyecto_cajero
                 lblCentro2.Text = strMontoRetiro;
                 return;
             }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "4";
+                lblCentro2.Text = strMontoPagoAgua;
+                return;
+            }
         }
 
         private void btn5_Click(object sender, EventArgs e)
@@ -352,6 +434,12 @@ namespace proyecto_cajero
             {
                 strMontoRetiro = strMontoRetiro + "5";
                 lblCentro2.Text = strMontoRetiro;
+                return;
+            }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "5";
+                lblCentro2.Text = strMontoPagoAgua;
                 return;
             }
         }
@@ -383,6 +471,12 @@ namespace proyecto_cajero
                 lblCentro2.Text = strMontoRetiro;
                 return;
             }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "6";
+                lblCentro2.Text = strMontoPagoAgua;
+                return;
+            }
         }
         private void btn7_Click(object sender, EventArgs e)
         {
@@ -409,6 +503,12 @@ namespace proyecto_cajero
             {
                 strMontoRetiro = strMontoRetiro + "7";
                 lblCentro2.Text = strMontoRetiro;
+                return;
+            }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "7";
+                lblCentro2.Text = strMontoPagoAgua;
                 return;
             }
         }
@@ -440,6 +540,12 @@ namespace proyecto_cajero
                 lblCentro2.Text = strMontoRetiro;
                 return;
             }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "8";
+                lblCentro2.Text = strMontoPagoAgua;
+                return;
+            }
         }
 
         private void btn9_Click(object sender, EventArgs e)
@@ -467,6 +573,12 @@ namespace proyecto_cajero
             {
                 strMontoRetiro = strMontoRetiro + "9";
                 lblCentro2.Text = strMontoRetiro;
+                return;
+            }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "9";
+                lblCentro2.Text = strMontoPagoAgua;
                 return;
             }
         }
@@ -498,6 +610,12 @@ namespace proyecto_cajero
                 lblCentro2.Text = strMontoRetiro;
                 return;
             }
+            if (flagPagoAgua == 1)
+            {
+                strMontoPagoAgua = strMontoPagoAgua + "0";
+                lblCentro2.Text = strMontoPagoAgua;
+                return;
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -525,6 +643,12 @@ namespace proyecto_cajero
             {
                 cargaPanelRetiro();
                 strMontoRetiro = "";
+                return;
+            }
+            if (flagPagoAgua == 1)
+            {
+                cargaPanelPagoAgua();
+                strMontoPagoAgua = "";
                 return;
             }
         }
@@ -595,6 +719,25 @@ namespace proyecto_cajero
                 flagMensajeRetiro = 1;
                 return;
             }
+            if (flagPagoAgua == 1)
+            {
+                flagPagoAgua = 0;
+                saldo = servicio.buscaCuenta(numeroCuenta).getSaldo();
+                saldo = saldo - servicio.convierteNumero(strMontoPagoAgua);
+                if (saldo < 0)
+                {
+                    cargaPanelRetiroInvalido();
+                    strMontoPagoAgua = "";
+                }
+                else
+                {
+                    servicio.buscaCuenta(numeroCuenta).setSaldo(saldo);
+                    cargaPanelPagoAguaValido();
+                    strMontoPagoAgua = "";
+                }
+                flagMensajePagoAgua = 1;
+                return;
+            }
         }
 
         private void btnIzq2_Click(object sender, EventArgs e)
@@ -605,7 +748,14 @@ namespace proyecto_cajero
                 flagMontoDeposito = 1;
                 cargaPanelDeposito();                
                 return;
-            }                    
+            }
+            if (flagPagos == 1)
+            {
+                flagPagos = 0;
+                flagPagoAgua = 1;
+                cargaPanelPagoAgua();
+                return;
+            }
         }
 
         private void btnDer4_Click(object sender, EventArgs e)
@@ -622,6 +772,15 @@ namespace proyecto_cajero
             if (flagMensajeRetiro== 1)
             {
                 flagMensajeRetiro = 0;
+                flagLoginCuenta = 0;
+                flagLoginClave = 0;
+                flagOpciones = 1;
+                cargaPanelOpciones();
+                return;
+            }
+            if (flagMensajePagoAgua == 1)
+            {
+                flagMensajePagoAgua = 0;
                 flagLoginCuenta = 0;
                 flagLoginClave = 0;
                 flagOpciones = 1;
@@ -680,6 +839,19 @@ namespace proyecto_cajero
                 cargaPanelLogin();
                 return;
             }
+            if (flagMensajePagoAgua == 1)
+            {
+                flagMensajePagoAgua = 0;
+                flagLoginCuenta = 1;
+                numeroCuenta = 0;
+                clave = 0;
+                dni = 0;
+                strClave = "";
+                strClaveX = "";
+                strCuenta = "";
+                cargaPanelLogin();
+                return;
+            }
             if (flagSaldo== 1)
             {
                 flagSaldo= 0;
@@ -708,6 +880,17 @@ namespace proyecto_cajero
                 flagOpciones = 0;
                 flagRetiro = 1;
                 cargaPanelRetiro();
+                return;
+            }
+        }
+
+        private void btnIzq3_Click(object sender, EventArgs e)
+        {
+            if (flagOpciones == 1)
+            {
+                flagOpciones = 0;
+                flagPagos = 1;
+                cargaPanelPagos();
                 return;
             }
         }
