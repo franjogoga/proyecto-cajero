@@ -13,7 +13,7 @@ namespace proyecto_cajero
     {
         public Bienvenida()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
 
         private void btnCliente_Click(object sender, EventArgs e)
@@ -23,6 +23,20 @@ namespace proyecto_cajero
             this.Hide();            
             ventanaCliente.Show();            
         }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            VentanaUsuario ventanaUsuario = new VentanaUsuario();
+            ventanaUsuario.setBienvenida(this);
+            this.Hide();
+            ventanaUsuario.Show();
+        }
+
+        private void Bienvenida_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+        }
+
 
     }
 }

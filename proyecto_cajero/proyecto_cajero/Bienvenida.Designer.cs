@@ -42,6 +42,7 @@
             this.btnUsuario.TabIndex = 0;
             this.btnUsuario.Text = "Usuario";
             this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.Click += new System.EventHandler(this.btnUsuario_Click);
             // 
             // btnCliente
             // 
@@ -74,6 +75,7 @@
             this.Controls.Add(this.btnUsuario);
             this.Name = "Bienvenida";
             this.Text = "Sistema Cajero Automático";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Bienvenida_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
