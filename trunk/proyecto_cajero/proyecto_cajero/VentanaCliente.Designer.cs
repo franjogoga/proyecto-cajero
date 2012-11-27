@@ -488,6 +488,7 @@
             this.btnIzq3.Size = new System.Drawing.Size(56, 43);
             this.btnIzq3.TabIndex = 1;
             this.btnIzq3.UseVisualStyleBackColor = true;
+            this.btnIzq3.Click += new System.EventHandler(this.btnIzq3_Click);
             // 
             // btnIzq2
             // 
