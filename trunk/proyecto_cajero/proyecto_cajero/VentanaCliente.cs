@@ -43,9 +43,174 @@ namespace proyecto_cajero
             InitializeComponent();
             clientes = servicio.cargarClientes();
             cuentas = servicio.cargarCuentas();
+            cargaPanelLogin();
             flagLoginCuenta = 1;
         }
 
+        public void cargaPanelLogin()
+        {
+            lblBienvenido.Text = "Bienvenido a su cajero";
+            lblCentro1.Text = "Ingrese su numero de cuenta";
+            lblCentro2.Text = "";
+            lblCuenta.Text = "Numero de Cuenta :";
+            lblClave.Text = "Clave                           :";
+            lblCentro3.Text = "______";
+            lblCentro4.Text = "____";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "";
+        }
+        public void cargaPanelOpciones()
+        {
+            dni = servicio.buscaCuenta(numeroCuenta).getDni();
+            lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+            lblCentro1.Text = "Seleccione una operación";
+            lblCentro2.Text = "";
+            lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "Depósitos";
+            lblIzq3.Text = "Pagos";
+            lblIzq4.Text = "Saldos";
+            lblDer1.Text = "";
+            lblDer2.Text = "Retiros";            
+            lblDer3.Text = "Transferencias";            
+            lblDer4.Text = "Salir";
+        }
+        public void cargaPanelLoginInvalido()
+        {
+            lblBienvenido.Text = "";
+            lblCentro1.Text = "";
+            lblCentro2.Text = "Clave no válida, intente nuevamente";
+            lblCentro3.Text = strCuenta;
+            lblCentro4.Text = "____";
+            lblCuenta.Text = "Numero de Cuenta :";
+            lblClave.Text = "Clave                           :";            
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "";
+        }
+        public void cargaPanelMensajeDeposito()
+        {
+            lblBienvenido.Text = "";
+            lblCentro1.Text = "";
+            lblCentro2.Text = "Se han ingresado S/. " + strMontoDeposito + " a su cuenta";
+            lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "Salir";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "Otra Transacción";                        
+        }
+        public void cargaPanelDeposito()
+        {
+            lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+            lblCentro1.Text = "Ingrese el monto del depósito";
+            lblCentro2.Text = "______";
+            lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "";
+        }
+        public void cargaPanelRetiro()
+        {
+            lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+            lblCentro1.Text = "Ingrese el monto del retiro";
+            lblCentro2.Text = "______";
+            lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "";
+        }
+        public void cargaPanelRetiroInvalido()
+        {
+            lblBienvenido.Text = "";
+            lblCentro1.Text = "";
+            lblCentro2.Text = "El monto ingresado excede el saldo de su cuenta";
+            lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "Salir";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";            
+            lblDer4.Text = "Otra Transacción";
+        }
+        public void cargaPanelRetiroValido()
+        {
+            lblBienvenido.Text = "";
+            lblCentro1.Text = "";
+            lblCentro2.Text = "Ud. ha retirado S/. " + strMontoRetiro + " de su cuenta";
+            lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "Salir";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "Otra Transacción";
+        }
+        public void cargaPanelSaldo()
+        {
+            dni = servicio.buscaCuenta(numeroCuenta).getDni();
+            lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+            lblCentro1.Text = "Su numero de cuenta " + numeroCuenta + " tiene";            
+            lblCentro2.Text = "S/. " + servicio.buscaCuenta(numeroCuenta).getSaldo() + " disponibles";
+            lblCentro3.Text = "";
+            lblCentro4.Text = "";
+            lblCuenta.Text = "";
+            lblClave.Text = "";
+            lblIzq1.Text = "";
+            lblIzq2.Text = "";
+            lblIzq3.Text = "";
+            lblIzq4.Text = "Salir";
+            lblDer1.Text = "";
+            lblDer2.Text = "";
+            lblDer3.Text = "";
+            lblDer4.Text = "Otra transacción";
+        }
         private void btn1_Click(object sender, EventArgs e)
         {
             if (flagLoginCuenta == 1)
@@ -351,34 +516,14 @@ namespace proyecto_cajero
                 return;
             }
             if (flagMontoDeposito == 1)
-            {                                                
-                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " "+servicio.buscaCliente(dni).getapellidoPaterno();
-                lblCentro1.Text = "Ingrese el monto del depósito";
-                lblCentro2.Text = "______";
-                lblIzq1.Text = "";
-                lblIzq2.Text = "";
-                lblIzq3.Text = "";
-                lblIzq4.Text = "";
-                lblDer1.Text = "";
-                lblDer2.Text = "";
-                lblDer3.Text = "";
-                lblDer4.Text = "";                
+            {
+                cargaPanelDeposito();                
                 strMontoDeposito = "";                
                 return;
             }
             if (flagRetiro == 1)
-            {                
-                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
-                lblCentro1.Text = "Ingrese el monto del retiro";
-                lblCentro2.Text = "______";
-                lblIzq1.Text = "";
-                lblIzq2.Text = "";
-                lblIzq3.Text = "";
-                lblIzq4.Text = "";
-                lblDer1.Text = "";
-                lblDer2.Text = "";
-                lblDer3.Text = "";
-                lblDer4.Text = "";
+            {
+                cargaPanelRetiro();
                 strMontoRetiro = "";
                 return;
             }
@@ -395,7 +540,6 @@ namespace proyecto_cajero
             if (flagLoginClave == 1)
             {
                 vecesLogin = vecesLogin + 1;                
-
                 numeroCuenta = servicio.convierteNumero(strCuenta);
                 clave = servicio.convierteNumero(strClave);
                 if (servicio.validarCuenta(numeroCuenta, clave))
@@ -403,22 +547,7 @@ namespace proyecto_cajero
                     flagLoginCuenta = 0;
                     flagLoginClave = 0;
                     flagOpciones = 1;
-                    dni = servicio.buscaCuenta(numeroCuenta).getDni();
-                    lblBienvenido.Text = "Bienvenido Sr(a). "+servicio.buscaCliente(dni).getNombre()+ " "+servicio.buscaCliente(dni).getapellidoPaterno();
-                    lblCentro1.Text = "Seleccione una operación";
-                    lblCentro2.Text = "";                    
-                    lblCentro3.Text = "";
-                    lblCentro4.Text = "";
-                    lblCuenta.Text = "";
-                    lblClave.Text = "";
-                    lblDer4.Text = "";
-
-                    lblIzq2.Text = "Depósitos";
-                    lblDer2.Text = "Retiros";
-                    lblIzq3.Text = "Pagos";
-                    lblDer3.Text = "Transferencias";
-                    lblIzq4.Text = "Saldos";
-                    lblDer4.Text = "Salir";
+                    cargaPanelOpciones();
                 }
                 else
                 {
@@ -429,14 +558,10 @@ namespace proyecto_cajero
                     }
                     flagLoginCuenta = 0;
                     flagLoginClave = 1;
-                    flagOpciones = 0;
-                    lblBienvenido.Text = "";
+                    flagOpciones = 0;                    
                     strClave = "";
                     strClaveX = "";
-                    lblCentro1.Text = "";
-                    lblCentro2.Text = "Clave no válida, intente nuevamente";
-                    lblCentro3.Text = strCuenta;
-                    lblCentro4.Text = "";
+                    cargaPanelLoginInvalido();
                 }
                 return;
             }
@@ -446,12 +571,8 @@ namespace proyecto_cajero
                 saldo = servicio.buscaCuenta(numeroCuenta).getSaldo();
                 saldo = saldo + servicio.convierteNumero(strMontoDeposito);
                 servicio.buscaCuenta(numeroCuenta).setSaldo(saldo);
-                lblBienvenido.Text = "";
-                lblCentro1.Text = "";
-                lblCentro2.Text = "Se han ingresado S/. " + strMontoDeposito + " a su cuenta";
+                cargaPanelMensajeDeposito();
                 strMontoDeposito = "";
-                lblIzq4.Text = "Salir";
-                lblDer4.Text = "Otra Transacción";
                 flagMensajeMontoDeposito = 1;
                 return;
             }
@@ -462,22 +583,14 @@ namespace proyecto_cajero
                 saldo = saldo - servicio.convierteNumero(strMontoRetiro);
                 if (saldo < 0)
                 {
-                    lblBienvenido.Text = "";
-                    lblCentro1.Text = "";
-                    lblCentro2.Text = "El monto ingresado excede el saldo de su cuenta";
+                    cargaPanelRetiroInvalido();
                     strMontoRetiro = "";
-                    lblIzq4.Text = "Salir";
-                    lblDer4.Text = "Otra Transacción";
                 }
                 else
                 {
-                    lblBienvenido.Text = "";
-                    lblCentro1.Text = "";
                     servicio.buscaCuenta(numeroCuenta).setSaldo(saldo);
-                    lblCentro2.Text = "Ud. ha retirado S/. " + strMontoRetiro + " de su cuenta";                    
+                    cargaPanelRetiroValido();
                     strMontoRetiro = "";
-                    lblIzq4.Text = "Salir";
-                    lblDer4.Text = "Otra Transacción";
                 }
                 flagMensajeRetiro = 1;
                 return;
@@ -490,16 +603,7 @@ namespace proyecto_cajero
             {
                 flagOpciones = 0;                
                 flagMontoDeposito = 1;
-                lblCentro1.Text = "Ingrese el monto del depósito";
-                lblCentro2.Text = "______";
-                lblIzq1.Text = "";
-                lblIzq2.Text = "";
-                lblIzq3.Text = "";
-                lblIzq4.Text = "";
-                lblDer1.Text = "";
-                lblDer2.Text = "";
-                lblDer3.Text = "";
-                lblDer4.Text = "";
+                cargaPanelDeposito();                
                 return;
             }                    
         }
@@ -511,23 +615,8 @@ namespace proyecto_cajero
                 flagMensajeMontoDeposito = 0;                
                 flagLoginCuenta = 0;
                 flagLoginClave = 0;
-                flagOpciones = 1;
-                dni = servicio.buscaCuenta(numeroCuenta).getDni();
-                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
-                lblCentro1.Text = "Seleccione una operación";
-                lblCentro2.Text = "";
-                lblCentro3.Text = "";
-                lblCentro4.Text = "";
-                lblCuenta.Text = "";
-                lblClave.Text = "";
-                lblDer4.Text = "";
-
-                lblIzq2.Text = "Depósitos";
-                lblDer2.Text = "Retiros";
-                lblIzq3.Text = "Pagos";
-                lblDer3.Text = "Transferencias";
-                lblIzq4.Text = "Saldos";
-                lblDer4.Text = "Salir";
+                flagOpciones = 1;                
+                cargaPanelOpciones();
                 return;
             }
             if (flagMensajeRetiro== 1)
@@ -536,22 +625,7 @@ namespace proyecto_cajero
                 flagLoginCuenta = 0;
                 flagLoginClave = 0;
                 flagOpciones = 1;
-                dni = servicio.buscaCuenta(numeroCuenta).getDni();
-                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
-                lblCentro1.Text = "Seleccione una operación";
-                lblCentro2.Text = "";
-                lblCentro3.Text = "";
-                lblCentro4.Text = "";
-                lblCuenta.Text = "";
-                lblClave.Text = "";
-                lblDer4.Text = "";
-
-                lblIzq2.Text = "Depósitos";
-                lblDer2.Text = "Retiros";
-                lblIzq3.Text = "Pagos";
-                lblDer3.Text = "Transferencias";
-                lblIzq4.Text = "Saldos";
-                lblDer4.Text = "Salir";
+                cargaPanelOpciones();
                 return;
             }
             if (flagSaldo== 1)
@@ -560,22 +634,7 @@ namespace proyecto_cajero
                 flagLoginCuenta = 0;
                 flagLoginClave = 0;
                 flagOpciones = 1;
-                dni = servicio.buscaCuenta(numeroCuenta).getDni();
-                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
-                lblCentro1.Text = "Seleccione una operación";
-                lblCentro2.Text = "";
-                lblCentro3.Text = "";
-                lblCentro4.Text = "";
-                lblCuenta.Text = "";
-                lblClave.Text = "";
-                lblDer4.Text = "";
-
-                lblIzq2.Text = "Depósitos";
-                lblDer2.Text = "Retiros";
-                lblIzq3.Text = "Pagos";
-                lblDer3.Text = "Transferencias";
-                lblIzq4.Text = "Saldos";
-                lblDer4.Text = "Salir";
+                cargaPanelOpciones();
                 return;
             }
             if (flagOpciones == 1)
@@ -588,21 +647,7 @@ namespace proyecto_cajero
                 strClave = "";
                 strClaveX = "";
                 strCuenta = "";
-                lblBienvenido.Text = "Bienvenido a su cajero";
-                lblCentro1.Text = "Ingrese su numero de cuenta";
-                lblCuenta.Text = "Numero de Cuenta :";
-                lblClave.Text = "Clave                           :";
-                lblCentro2.Text = "";
-                lblCentro3.Text = "______";
-                lblCentro4.Text = "____";
-                lblIzq1.Text = "";
-                lblIzq2.Text = "";
-                lblIzq3.Text = "";
-                lblIzq4.Text = "";
-                lblDer1.Text = "";
-                lblDer2.Text = "";
-                lblDer3.Text = "";
-                lblDer4.Text = "";
+                cargaPanelLogin();
                 return;
             }
         }
@@ -619,21 +664,7 @@ namespace proyecto_cajero
                 strClave = "";
                 strClaveX = "";
                 strCuenta = "";
-                lblBienvenido.Text = "Bienvenido a su cajero";
-                lblCentro1.Text = "Ingrese su numero de cuenta";
-                lblCuenta.Text = "Numero de Cuenta :";
-                lblClave.Text = "Clave                           :";
-                lblCentro2.Text = "";
-                lblCentro3.Text = "______";
-                lblCentro4.Text = "____";
-                lblIzq1.Text = "";
-                lblIzq2.Text = "";
-                lblIzq3.Text = "";
-                lblIzq4.Text = "";
-                lblDer1.Text = "";
-                lblDer2.Text = "";
-                lblDer3.Text = "";
-                lblDer4.Text = "";
+                cargaPanelLogin();
                 return;
             }
             if (flagMensajeRetiro == 1)
@@ -646,21 +677,7 @@ namespace proyecto_cajero
                 strClave = "";
                 strClaveX = "";
                 strCuenta = "";
-                lblBienvenido.Text = "Bienvenido a su cajero";
-                lblCentro1.Text = "Ingrese su numero de cuenta";
-                lblCuenta.Text = "Numero de Cuenta :";
-                lblClave.Text = "Clave                           :";
-                lblCentro2.Text = "";
-                lblCentro3.Text = "______";
-                lblCentro4.Text = "____";
-                lblIzq1.Text = "";
-                lblIzq2.Text = "";
-                lblIzq3.Text = "";
-                lblIzq4.Text = "";
-                lblDer1.Text = "";
-                lblDer2.Text = "";
-                lblDer3.Text = "";
-                lblDer4.Text = "";
+                cargaPanelLogin();
                 return;
             }
             if (flagSaldo== 1)
@@ -673,43 +690,14 @@ namespace proyecto_cajero
                 strClave = "";
                 strClaveX = "";
                 strCuenta = "";
-                lblBienvenido.Text = "Bienvenido a su cajero";
-                lblCentro1.Text = "Ingrese su numero de cuenta";
-                lblCuenta.Text = "Numero de Cuenta :";
-                lblClave.Text = "Clave                           :";
-                lblCentro2.Text = "";
-                lblCentro3.Text = "______";
-                lblCentro4.Text = "____";
-                lblIzq1.Text = "";
-                lblIzq2.Text = "";
-                lblIzq3.Text = "";
-                lblIzq4.Text = "";
-                lblDer1.Text = "";
-                lblDer2.Text = "";
-                lblDer3.Text = "";
-                lblDer4.Text = "";
+                cargaPanelLogin();
                 return;
             }
             if (flagOpciones == 1)
             {
                 flagOpciones = 0;
                 flagSaldo = 1;
-                dni = servicio.buscaCuenta(numeroCuenta).getDni();
-                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
-                lblCentro1.Text = "Su numero de cuenta "+ numeroCuenta+ " tiene";
-                lblCuenta.Text = "";
-                lblClave.Text = "";
-                lblCentro2.Text = "S/. " + servicio.buscaCuenta(numeroCuenta).getSaldo() + " disponibles";
-                lblCentro3.Text = "";
-                lblCentro4.Text = "";
-                lblIzq1.Text = "";
-                lblIzq2.Text = "";
-                lblIzq3.Text = "";
-                lblIzq4.Text = "Salir";
-                lblDer1.Text = "";
-                lblDer2.Text = "";
-                lblDer3.Text = "";
-                lblDer4.Text = "Otra transacción";
+                cargaPanelSaldo();
             }
         }
 
@@ -718,21 +706,11 @@ namespace proyecto_cajero
             if (flagOpciones == 1)
             {
                 flagOpciones = 0;
-                flagRetiro = 1;                                
-                lblCentro1.Text = "Ingrese el monto del retiro";
-                lblCentro2.Text = "______";
-                lblIzq1.Text = "";
-                lblIzq2.Text = "";
-                lblIzq3.Text = "";
-                lblIzq4.Text = "";
-                lblDer1.Text = "";
-                lblDer2.Text = "";
-                lblDer3.Text = "";
-                lblDer4.Text = "";
+                flagRetiro = 1;
+                cargaPanelRetiro();
                 return;
             }
         }
-
 
 
     }
