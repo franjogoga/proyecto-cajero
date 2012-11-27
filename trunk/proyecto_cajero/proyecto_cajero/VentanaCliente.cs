@@ -26,6 +26,7 @@ namespace proyecto_cajero
         int clave = 0;
         int dni = 0;
         int flagMensajeMontoDeposito = 0;
+        int flagMensajeRetiro = 0;
         int montoDeposito = 0;
         int flagLoginCuenta = 0;
         int flagLoginClave = 0;
@@ -350,9 +351,7 @@ namespace proyecto_cajero
                 return;
             }
             if (flagMontoDeposito == 1)
-            {                
-                flagMontoDeposito = 0;
-                flagMensajeMontoDeposito = 1;
+            {                                                
                 lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " "+servicio.buscaCliente(dni).getapellidoPaterno();
                 lblCentro1.Text = "Ingrese el monto del depósito";
                 lblCentro2.Text = "______";
@@ -365,6 +364,22 @@ namespace proyecto_cajero
                 lblDer3.Text = "";
                 lblDer4.Text = "";                
                 strMontoDeposito = "";                
+                return;
+            }
+            if (flagRetiro == 1)
+            {                
+                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+                lblCentro1.Text = "Ingrese el monto del retiro";
+                lblCentro2.Text = "______";
+                lblIzq1.Text = "";
+                lblIzq2.Text = "";
+                lblIzq3.Text = "";
+                lblIzq4.Text = "";
+                lblDer1.Text = "";
+                lblDer2.Text = "";
+                lblDer3.Text = "";
+                lblDer4.Text = "";
+                strMontoRetiro = "";
                 return;
             }
         }
@@ -403,6 +418,7 @@ namespace proyecto_cajero
                     lblIzq3.Text = "Pagos";
                     lblDer3.Text = "Transferencias";
                     lblIzq4.Text = "Saldos";
+                    lblDer4.Text = "Salir";
                 }
                 else
                 {
@@ -432,11 +448,38 @@ namespace proyecto_cajero
                 servicio.buscaCuenta(numeroCuenta).setSaldo(saldo);
                 lblBienvenido.Text = "";
                 lblCentro1.Text = "";
-                lblCentro2.Text = "Se han ingresado " + strMontoDeposito + " a su cuenta";
+                lblCentro2.Text = "Se han ingresado S/. " + strMontoDeposito + " a su cuenta";
                 strMontoDeposito = "";
                 lblIzq4.Text = "Salir";
                 lblDer4.Text = "Otra Transacción";
                 flagMensajeMontoDeposito = 1;
+                return;
+            }
+            if (flagRetiro == 1)
+            {
+                flagRetiro = 0;
+                saldo = servicio.buscaCuenta(numeroCuenta).getSaldo();
+                saldo = saldo - servicio.convierteNumero(strMontoRetiro);
+                if (saldo < 0)
+                {
+                    lblBienvenido.Text = "";
+                    lblCentro1.Text = "";
+                    lblCentro2.Text = "El monto ingresado excede el saldo de su cuenta";
+                    strMontoRetiro = "";
+                    lblIzq4.Text = "Salir";
+                    lblDer4.Text = "Otra Transacción";
+                }
+                else
+                {
+                    lblBienvenido.Text = "";
+                    lblCentro1.Text = "";
+                    servicio.buscaCuenta(numeroCuenta).setSaldo(saldo);
+                    lblCentro2.Text = "Ud. ha retirado S/. " + strMontoRetiro + " de su cuenta";                    
+                    strMontoRetiro = "";
+                    lblIzq4.Text = "Salir";
+                    lblDer4.Text = "Otra Transacción";
+                }
+                flagMensajeRetiro = 1;
                 return;
             }
         }
@@ -484,6 +527,31 @@ namespace proyecto_cajero
                 lblIzq3.Text = "Pagos";
                 lblDer3.Text = "Transferencias";
                 lblIzq4.Text = "Saldos";
+                lblDer4.Text = "Salir";
+                return;
+            }
+            if (flagMensajeRetiro== 1)
+            {
+                flagMensajeRetiro = 0;
+                flagLoginCuenta = 0;
+                flagLoginClave = 0;
+                flagOpciones = 1;
+                dni = servicio.buscaCuenta(numeroCuenta).getDni();
+                lblBienvenido.Text = "Bienvenido Sr(a). " + servicio.buscaCliente(dni).getNombre() + " " + servicio.buscaCliente(dni).getapellidoPaterno();
+                lblCentro1.Text = "Seleccione una operación";
+                lblCentro2.Text = "";
+                lblCentro3.Text = "";
+                lblCentro4.Text = "";
+                lblCuenta.Text = "";
+                lblClave.Text = "";
+                lblDer4.Text = "";
+
+                lblIzq2.Text = "Depósitos";
+                lblDer2.Text = "Retiros";
+                lblIzq3.Text = "Pagos";
+                lblDer3.Text = "Transferencias";
+                lblIzq4.Text = "Saldos";
+                lblDer4.Text = "Salir";
                 return;
             }
             if (flagSaldo== 1)
@@ -507,6 +575,34 @@ namespace proyecto_cajero
                 lblIzq3.Text = "Pagos";
                 lblDer3.Text = "Transferencias";
                 lblIzq4.Text = "Saldos";
+                lblDer4.Text = "Salir";
+                return;
+            }
+            if (flagOpciones == 1)
+            {
+                flagOpciones = 0;
+                flagLoginCuenta = 1;
+                numeroCuenta = 0;
+                clave = 0;
+                dni = 0;
+                strClave = "";
+                strClaveX = "";
+                strCuenta = "";
+                lblBienvenido.Text = "Bienvenido a su cajero";
+                lblCentro1.Text = "Ingrese su numero de cuenta";
+                lblCuenta.Text = "Numero de Cuenta :";
+                lblClave.Text = "Clave                           :";
+                lblCentro2.Text = "";
+                lblCentro3.Text = "______";
+                lblCentro4.Text = "____";
+                lblIzq1.Text = "";
+                lblIzq2.Text = "";
+                lblIzq3.Text = "";
+                lblIzq4.Text = "";
+                lblDer1.Text = "";
+                lblDer2.Text = "";
+                lblDer3.Text = "";
+                lblDer4.Text = "";
                 return;
             }
         }
@@ -516,6 +612,33 @@ namespace proyecto_cajero
             if (flagMensajeMontoDeposito == 1)
             {
                 flagMensajeMontoDeposito = 0;
+                flagLoginCuenta = 1;
+                numeroCuenta = 0;
+                clave = 0;
+                dni = 0;
+                strClave = "";
+                strClaveX = "";
+                strCuenta = "";
+                lblBienvenido.Text = "Bienvenido a su cajero";
+                lblCentro1.Text = "Ingrese su numero de cuenta";
+                lblCuenta.Text = "Numero de Cuenta :";
+                lblClave.Text = "Clave                           :";
+                lblCentro2.Text = "";
+                lblCentro3.Text = "______";
+                lblCentro4.Text = "____";
+                lblIzq1.Text = "";
+                lblIzq2.Text = "";
+                lblIzq3.Text = "";
+                lblIzq4.Text = "";
+                lblDer1.Text = "";
+                lblDer2.Text = "";
+                lblDer3.Text = "";
+                lblDer4.Text = "";
+                return;
+            }
+            if (flagMensajeRetiro == 1)
+            {
+                flagMensajeRetiro= 0;
                 flagLoginCuenta = 1;
                 numeroCuenta = 0;
                 clave = 0;
