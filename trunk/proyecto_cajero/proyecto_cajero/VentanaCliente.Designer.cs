@@ -30,13 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblCentro2 = new System.Windows.Forms.Label();
             this.lblDer1 = new System.Windows.Forms.Label();
             this.lblCentro4 = new System.Windows.Forms.Label();
             this.lblClave = new System.Windows.Forms.Label();
             this.lblCuenta = new System.Windows.Forms.Label();
             this.lblCentro3 = new System.Windows.Forms.Label();
-            this.lblCentro2 = new System.Windows.Forms.Label();
-            this.lblCentro1 = new System.Windows.Forms.Label();
             this.lblDer4 = new System.Windows.Forms.Label();
             this.lblDer3 = new System.Windows.Forms.Label();
             this.lblDer2 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.lblIzq2 = new System.Windows.Forms.Label();
             this.lblIzq1 = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
+            this.lblCentro1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
@@ -104,11 +104,22 @@
             this.panel2.Size = new System.Drawing.Size(398, 252);
             this.panel2.TabIndex = 0;
             // 
+            // lblCentro2
+            // 
+            this.lblCentro2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.lblCentro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCentro2.Location = new System.Drawing.Point(69, 94);
+            this.lblCentro2.Name = "lblCentro2";
+            this.lblCentro2.Size = new System.Drawing.Size(256, 26);
+            this.lblCentro2.TabIndex = 2;
+            this.lblCentro2.Text = "_____";
+            this.lblCentro2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lblDer1
             // 
             this.lblDer1.AutoSize = true;
             this.lblDer1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDer1.Location = new System.Drawing.Point(348, 31);
+            this.lblDer1.Location = new System.Drawing.Point(359, 31);
             this.lblDer1.Name = "lblDer1";
             this.lblDer1.Size = new System.Drawing.Size(22, 16);
             this.lblDer1.TabIndex = 0;
@@ -154,28 +165,6 @@
             this.lblCentro3.Size = new System.Drawing.Size(50, 16);
             this.lblCentro3.TabIndex = 4;
             this.lblCentro3.Text = "______";
-            // 
-            // lblCentro2
-            // 
-            this.lblCentro2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.lblCentro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCentro2.Location = new System.Drawing.Point(69, 94);
-            this.lblCentro2.Name = "lblCentro2";
-            this.lblCentro2.Size = new System.Drawing.Size(256, 26);
-            this.lblCentro2.TabIndex = 2;
-            this.lblCentro2.Text = "_____";
-            this.lblCentro2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblCentro1
-            // 
-            this.lblCentro1.BackColor = System.Drawing.Color.Transparent;
-            this.lblCentro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCentro1.Location = new System.Drawing.Point(14, 64);
-            this.lblCentro1.Name = "lblCentro1";
-            this.lblCentro1.Size = new System.Drawing.Size(367, 30);
-            this.lblCentro1.TabIndex = 1;
-            this.lblCentro1.Text = "__";
-            this.lblCentro1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDer4
             // 
@@ -259,6 +248,17 @@
             this.lblBienvenido.TabIndex = 3;
             this.lblBienvenido.Text = "__";
             this.lblBienvenido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblCentro1
+            // 
+            this.lblCentro1.BackColor = System.Drawing.Color.Transparent;
+            this.lblCentro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCentro1.Location = new System.Drawing.Point(14, 64);
+            this.lblCentro1.Name = "lblCentro1";
+            this.lblCentro1.Size = new System.Drawing.Size(367, 30);
+            this.lblCentro1.TabIndex = 1;
+            this.lblCentro1.Text = "__";
+            this.lblCentro1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox1
             // 
@@ -447,6 +447,7 @@
             this.btnDer3.Size = new System.Drawing.Size(56, 43);
             this.btnDer3.TabIndex = 1;
             this.btnDer3.UseVisualStyleBackColor = true;
+            this.btnDer3.Click += new System.EventHandler(this.btnDer3_Click);
             // 
             // btnDer2
             // 

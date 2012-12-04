@@ -14,7 +14,7 @@ namespace Servicios
 
         public List<Usuario> cargarUsuarios()
         {                        
-            Usuario u1 = new Usuario();
+            Usuario u1 = new Usuario();            
             u1.setDni(12345678);
             u1.setClave(1234);
             u1.setNombres("Juan");
@@ -29,7 +29,8 @@ namespace Servicios
             u1.setApellidoMaterno("Gracia");
 
             usuarios.Add(u1);
-            usuarios.Add(u2);
+            usuarios.Add(u2);            
+
             return usuarios;
         }
 
@@ -87,7 +88,7 @@ namespace Servicios
         }
 
         public bool validarCuenta(int numeroCuenta, int clave)
-        {
+        {            
             bool valido = false;
             Cuenta cuenta = buscaCuenta(numeroCuenta);
             if (cuenta == null)            
@@ -109,7 +110,7 @@ namespace Servicios
         }        
 
         public Cuenta buscaCuenta(int numeroCuenta)
-        {
+        {            
             Cuenta cuenta=null;
             foreach (Cuenta c in cuentas)            
                 if (numeroCuenta == c.getNumero())                

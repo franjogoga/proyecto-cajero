@@ -13,11 +13,11 @@ namespace proyecto_cajero
     {
         public Bienvenida()
         {
-            InitializeComponent();            
-        }
-
+            InitializeComponent();
+        }                
+                
         private void btnCliente_Click(object sender, EventArgs e)
-        {
+        {            
             VentanaCliente ventanaCliente = new VentanaCliente();
             ventanaCliente.setBienvenida(this);
             this.Hide();            
